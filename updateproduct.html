@@ -1,0 +1,23 @@
+<form style="padding:10px" ng-controller="updateCtrl">
+							<div class="form-group">
+								<label for="ProductName">Product Name</label>
+								<input type="text" class="form-control" placeholder="{{product.id}}" ng-model="productname" required>
+                           </div>
+                           <div class="form-group">
+								<label for="company">Company </label>
+								<input type="text" class="form-control" placeholder="{{product.company}}" ng-model="company" required>
+                           </div>
+                           <div class="form-group">
+								<label for="company">Price </label>
+								<input type="text" class="form-control" placeholder="{{product.price}}" ng-model="price" required>
+                           </div>
+                           <div class="form-group">
+								<label for="company">Quantity </label>
+								<input type="text" class="form-control" placeholder="{{product.quantity}}" ng-model="quantity" required>
+                           </div>
+                          <button type="submit" class="btn btn-default" ng-click="update()">Save updated data</button>
+						  <a href="#/viewproduct" class="btn btn-danger">Cancel</a>
+                          <h1 ng-if="successMessage == 0">Great Data is Updated!</h1>
+                          
+		  </form>
+

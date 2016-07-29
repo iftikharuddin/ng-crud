@@ -1,0 +1,28 @@
+	<div class="main"> 
+			<input type="text" ng-model="search">	
+               <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Product Name</th>
+                        <th>Company</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
+                          
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="product in data | filter:search | orderBy:'name'">
+                        <td>{{product.name}}</td>
+                        <td>{{product.company}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.quantity}}</td>
+                        <td ng-controller="updateCtrl"><a class="btn btn-primary" href="#/updateproduct/{{product.id}}" >Update</a></td>          
+						 <td ng-controller="deleteCtrl"><a class="btn btn-danger" ng-click="delete(product.id,$index)">Delete</a></td>                        
+                      </tr>
+                      
+                    </tr>
+                    </tbody>
+              </table>
+	</div>

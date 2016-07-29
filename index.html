@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dashboard</title>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="main.css">
+        <style type="text/css" src="css/bootstrap.min.css"></style>
+        <script src="js/angular/angular.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="main.js"></script>
+        <script src="angularkhan.js"></script>
+        <script src="js/angular/angular-route.min.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    
+    </head>
+	<body ng-controller="myController">
+		<div class="header">
+			<div class="logo">
+				<i class="fa fa-tachometer"></i>
+				<span>Dashboard</span>
+			</div>
+			<a href="#" class="nav-trigger"><span></span></a>
+		</div>
+		<div class="side-nav">
+			<div class="logo">
+				<i class="fa fa-tachometer"></i>
+				<span>Dashboard</span>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href="#">
+							<span><i class="fa fa-user"></i></span>
+							<span>Users</span>
+						</a>
+					</li>
+                    <li>
+						<a href="#/addproduct">
+							<span><i class="fa fa-user"></i></span>
+							<span>Add Product</span>
+						</a>
+					</li>
+					<li>
+						<a href="#/viewproduct">
+
+							<span><i class="fa fa-envelope"></i></span>
+							<span>View Products</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="#">
+							<span><i class="fa fa-bar-chart"></i></span>
+							<span>Analytics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span><i class="fa fa-credit-card-alt"></i></span>
+							<span>Payments</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="main-content">  
+              <div ng-view></div>
+		</div>
+	
+    </body>
+</html>

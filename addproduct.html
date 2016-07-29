@@ -1,0 +1,24 @@
+<div class="main">    
+               
+                       <form style="padding:10px">
+                          <div class="form-group">
+                            <label for="ProductName">Product Name</label>
+                            <input type="text" class="form-control" placeholder="Product Name" ng-model="productname" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="company">Company </label>
+                            <input type="text" class="form-control" placeholder="company" ng-model="company" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="company">Price </label>
+                            <input type="text" class="form-control" placeholder="price" ng-model="price" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="company">Quantity </label>
+                            <input type="text" class="form-control" placeholder="quantity" ng-model="quantity" required>
+                          </div>
+                          <button type="submit" class="btn btn-default" ng-click="insertData()">Submit</button>
+                          <h1 ng-if="successMessage == 0">Great Data is inserted!</h1>
+
+                        </form>
+</div>
